@@ -1,6 +1,11 @@
 <h1> Movie's Details: </h1>
-<div>
   <div><span>Id: <span>{{ movie.id }}</span></span></div>
   <div><span>Name: <span>{{ movie.name }}</span></span></div>
   <div><span>Release year: <span>{{ movie.releaseYear }}</span></span></div>
+
+<div>
+  <label style="margin: 10px; text-align: left">
+    Movie name:
+      <input [ngModel]="movie.name" placeholder="Enter movie name">
+  </label>
 </div>
