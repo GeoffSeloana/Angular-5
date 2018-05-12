@@ -11,7 +11,7 @@ export class MoviesComponent implements OnInit {
   movie: Movie = {
     id: 1,
     name: 'Star Wars',
-    releaseYear: 1977,
+    releaseYear: 1977
   };
 
   constructor() { }
