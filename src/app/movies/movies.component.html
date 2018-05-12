@@ -2,10 +2,16 @@
   <div><span>Id: <span>{{ movie.id }}</span></span></div>
   <div><span>Name: <span>{{ movie.name }}</span></span></div>
   <div><span>Release year: <span>{{ movie.releaseYear }}</span></span></div>
-
+<h2>Edit your information</h2>
 <div>
   <label style="margin: 10px; text-align: left">
-    Movie name:
+    Movie name (data-binding one way):
       <input [ngModel]="movie.name" placeholder="Enter movie name">
+  </label>
+</div>
+  <div>
+  <label style="margin: 10px; text-align: left">
+    Release year (data-binding two way):
+    <input [(ngModel)]="movie.releaseYear" placeholder="Enter release year">
   </label>
 </div>

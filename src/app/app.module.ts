@@ -13,7 +13,8 @@ import { FormsModule } from '@angular/forms';
     MoviesComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
