@@ -2,7 +2,7 @@
 
 import {Movie} from '../models/movie';
 
-export let fakeMovie: Movie[] = [
+export let fakeMovies: Movie[] = [
   {
     id: 1,
     name: 'The Ghost and the darkness',
