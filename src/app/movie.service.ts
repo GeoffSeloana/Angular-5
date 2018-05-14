@@ -6,15 +6,19 @@ import {Movie} from '../models/movie';
 import { Observable } from 'rxjs/Observable';
 import { of } from 'rxjs/observable/of';
 
+// MessageService
+import { MessageService } from './message.service';
+
 @Injectable()
 export class MovieService {
 
 
   getMovies(): Observable<Movie[]> {
+    this.messageService.add(`${new Date().toLocaleString()}. Get movie List`)
     return of(fakeMovies);
   }
 
 
-  constructor() { }
+  constructor(public messageService: MessageService) { }
 
 }
