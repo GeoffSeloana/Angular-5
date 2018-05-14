@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Movie} from '../../models/movie';
-import {fakeMovies} from '../fake-movies';
+import {MovieService } from '../movie.service';
 
 @Component({
   selector: 'app-movies',
@@ -18,11 +18,24 @@ export class MoviesComponent implements OnInit {
   // Action when selecting a movie item on a list
   selectedMovie: Movie;
 
-  movies = fakeMovies;
+  movies: Movie[];
 
-  constructor() { }
+  constructor(private movieService: MovieService) {
+
+  }
+
+  getMoviesFromService(): void {
+    // this.movies = this.movieService.getMovies();
+
+    this.movieService.getMovies().subscribe(
+      (updatedMovies) => {
+          this.movies = updatedMovies;
+      }
+    );
+  }
 
   ngOnInit() {
+    this.getMoviesFromService();
   }
 
   onSelectedMovie(movie: Movie): void {
