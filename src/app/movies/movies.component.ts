@@ -15,11 +15,20 @@ export class MoviesComponent implements OnInit {
     releaseYear: 1977
   };
 
+  // Action when selecting a movie item on a list
+  selectedMovie: Movie;
+
   movies = fakeMovies;
 
   constructor() { }
 
   ngOnInit() {
+  }
+
+  onSelectedMovie(movie: Movie): void {
+    this.selectedMovie = movie;
+    console.log(`selectedMovie = ${JSON.stringify(this.selectedMovie)}`);
+    // lert(`selectedMovie = ${JSON.stringify(this.selectedMovie)}`);
   }
 
 }
