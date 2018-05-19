@@ -8,8 +8,6 @@ import { FormsModule } from '@angular/forms';
 import { MovieDetailComponent } from './movie-detail/movie-detail.component';
 import { MovieService} from './movie.service';
 import { MessagesComponent } from './messages/messages.component';
-import { MessageService } from './message.service';
-import { AppRoutingModule } from './/app-routing.module';
 
 
 @NgModule({
@@ -21,12 +19,10 @@ import { AppRoutingModule } from './/app-routing.module';
   ],
   imports: [
     BrowserModule,
-    FormsModule,
-    AppRoutingModule
+    FormsModule
   ],
   providers: [
-    MovieService,
-    MessageService
+    MovieService
   ],
   bootstrap: [AppComponent]
 })
