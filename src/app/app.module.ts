@@ -19,11 +19,6 @@ import { AppRoutingModule } from './/app-routing.module';
     MovieDetailComponent,
     MessagesComponent
   ],
-  imports: [
-    BrowserModule,
-    FormsModule,
-    AppRoutingModule
-  ],
   providers: [
     MovieService,
     MessageService
