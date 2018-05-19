@@ -12,3 +12,22 @@ import { MessageService } from './message.service';
 import { AppRoutingModule } from './/app-routing.module';
 
 
+@NgModule({
+  declarations: [
+    AppComponent,
+    MoviesComponent,
+    MovieDetailComponent,
+    MessagesComponent
+  ],
+  imports: [
+    BrowserModule,
+    FormsModule,
+    AppRoutingModule
+  ],
+  providers: [
+    MovieService,
+    MessageService
+  ],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
